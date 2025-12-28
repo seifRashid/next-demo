@@ -4,6 +4,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Circle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Variants } from "framer-motion";
 
 
 function ElegantShape({
@@ -81,7 +82,7 @@ function HeroGeometric({
     title1?: string;
     title2?: string;
 }) {
-    const fadeUpVariants = {
+    const fadeUpVariants: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: (i: number) => ({
             opacity: 1,
